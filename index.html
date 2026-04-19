@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Elite | Kirim Pesan via Bot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <div class="glass-card">
+        <div class="card-header">
+            <div class="icon-wrapper">
+                <i class="fab fa-telegram-plane"></i>
+            </div>
+            <h1>Telegram <span>Elite</span></h1>
+            <p>Kirim pesan instan via Bot Telegram</p>
+        </div>
+
+        <div class="backend-selector">
+            <label>Pilih Backend:</label>
+            <select id="backendType">
+                <option value="nodejs">🚀 Node.js (Langsung) - Port 3597</option>
+                <option value="php">🐘 PHP (Proxy) - Port 80/443</option>
+            </select>
+        </div>
+
+        <form id="telegramForm">
+            <div class="input-group">
+                <label><i class="fas fa-robot"></i> Bot Token</label>
+                <input type="text" id="botToken" placeholder="1234567890:ABCdefGHIJKlmnoPQRstUVwxyz" required>
+                <div class="input-border"></div>
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-user-circle"></i> Chat ID</label>
+                <input type="text" id="chatId" placeholder="123456789" required>
+                <div class="input-border"></div>
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-envelope"></i> Pesan</label>
+                <textarea id="message" rows="4" placeholder="Tulis pesan kerenmu..." required></textarea>
+                <div class="input-border"></div>
+            </div>
+
+            <button type="submit" id="sendBtn">
+                <span class="btn-text">Kirim Pesan</span>
+                <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                <div class="btn-loader"></div>
+            </button>
+        </form>
+
+        <div id="statusMessage" class="status-message"></div>
+
+        <div class="info-panel">
+            <div class="info-item">
+                <i class="fas fa-key"></i>
+                <span>Token dari <strong>@BotFather</strong></span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-id-card"></i>
+                <span>Chat ID dari <strong>@userinfobot</strong></span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-globe"></i>
+                <span>Server: <strong>xhhosting.qoupayid.xyz</strong></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
